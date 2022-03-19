@@ -1,0 +1,28 @@
+{
+  "esversion": 6,
+  "type": "module",
+  "start": "node --experimental-modules src/index.mjs ",
+  "script": {
+    "dev": "env $(cat .env) nodemon server.js",
+    "knex": "env $(cat .env) knex",
+    "knex_create": "env $(cat .env) ./node_modules/.bin/knex migrate:make create_all_tables",
+    "knex_latest": "env $(cat .env) ./node_modules/.bin/knex migrate:latest",
+    "knex_up": "env $(cat .env) ./node_modules/.bin/knex migrate:up",
+    "knex_down": "env $(cat .env) ./node_modules/.bin/knex migrate:down"
+  },
+  "dependencies": {
+    "db-errors": "^0.2.3",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^1.0.4",
+    "objection": "^3.0.1",
+    "pg": "^8.7.3",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
+}
