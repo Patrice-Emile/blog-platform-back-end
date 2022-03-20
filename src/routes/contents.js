@@ -25,7 +25,6 @@ const contentsRoutes = ({ app }) => {
       // console.log("req.body : ", req.body);
       // console.log("req.user", req.user);
 
-      // TODO verif champs
       await yupSchema.validate(req.body, {
         abortEarly: false,
       });

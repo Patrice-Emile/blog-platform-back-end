@@ -34,7 +34,6 @@ const usersRoutes = ({ app }) => {
       return;
     }
 
-    // TODO verify
     const item = await usersModel.query().where({ id_user });
     // const item = await usersModel.query();
     if (!item.length) {
@@ -109,7 +108,6 @@ const usersRoutes = ({ app }) => {
     await yupSchema.validate(data, {
       abortEarly: false,
     });
-    // TODO verify
     const item = await usersModel.query().where({ id });
     // const item = await usersModel.query();
     if (!item.length) {
